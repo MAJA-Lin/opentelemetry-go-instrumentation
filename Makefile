@@ -79,7 +79,7 @@ build: generate
 
 .PHONY: docker-build
 docker-build:
-	docker buildx build -t $(IMG_NAME) .
+	docker-buildx build -t "$(IMG_NAME):0.4.0" --output=type=docker .
 
 .PHONY: offsets
 offsets:
